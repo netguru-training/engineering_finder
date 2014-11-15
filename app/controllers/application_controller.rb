@@ -6,4 +6,9 @@ class ApplicationController < ActionController::Base
   decent_configuration do
     strategy DecentExposure::StrongParametersStrategy
   end
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.for(:sign_up) do |u|
+      u.permit :name, :lastname, :firstname, :email, :password, :password_confirmation
+  end
 end
