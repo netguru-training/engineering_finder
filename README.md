@@ -8,6 +8,7 @@
 * Krzysztof
 * Piotr
 * Rafał
+
 ### About project
 The purpose of our application is creating a place where all young engineers and their mentors can meet and share their ideas for theses.
 
