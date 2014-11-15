@@ -15,8 +15,9 @@ puts 'CREATED ADMIN USER: ' << user.email
 end
 
 5.times do
-  Thesis.create user_id: 1 , title: Faker::Lorem.sentence
+  Thesis.create user_id: 1 , category_id: 1, title: Faker::Lorem.sentence
 end
 
 5.times do
-  Categories.create,
+  Category.create name: Faker::Lorem.sentence
+end
