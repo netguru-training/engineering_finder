@@ -12,4 +12,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :theses
+
+
+validates :firstname, :lastname, presence: true
+
+
 end
