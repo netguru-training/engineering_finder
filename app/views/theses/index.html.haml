@@ -1,3 +1,14 @@
 %h1 Thesis view
 
 %h3 "We have #{theses.size} Theses"
+
+%table.table.table-bordered.table-striped.table-hover
+  %tr
+    %th Title
+    %th University
+    %th Owner
+  - theses.each do |thesis|
+    %tr 
+      %td=thesis.title
+      %td=thesis.university
+      %td=thesis.user.email
