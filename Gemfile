@@ -16,6 +16,11 @@ gem 'high_voltage'
 gem 'pg'
 gem 'simple_form'
 gem 'upmin-admin'
+gem 'draper'
+gem 'decent_exposure'
+
+
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
