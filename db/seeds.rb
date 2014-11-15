@@ -17,3 +17,6 @@ end
 5.times do
   Thesis.create user_id: 1 , title: Faker::Lorem.sentence
 end
+
+5.times do
+  Categories.create,
