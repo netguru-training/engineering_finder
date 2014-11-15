@@ -1,7 +1,5 @@
-.jumbotron
-  %h1 Create new thesis
 .thesis-form
-  = form_for @thesis do |f|
+  = form_for thesis do |f|
     = f.label :title
     = f.text_field :title
 
