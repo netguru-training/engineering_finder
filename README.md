@@ -7,7 +7,7 @@
 
 ### Heroku
 
-App is available on heroku: http://www.cheat-sheets.org/saved-copy/git-cheat-sheet.pdf
+App is available on heroku: https://floating-ridge-4935.herokuapp.com/
 
 ## Technologies
 
