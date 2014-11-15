@@ -1,2 +1,0 @@
-class ThesisController < ApplicationController
-end
