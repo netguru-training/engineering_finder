@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users
 
-  resources :theses
-  resources :categories
+  resources :categories do
+    resources :theses do
+      resources :reviews
+    end
+  end
+
 end
