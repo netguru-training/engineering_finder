@@ -1,1 +1,7 @@
 %h1 Categories view
+
+%h2="There's #{categories.size}"
+
+%ul
+  - categories.each do |category|
+    %li= category.name
