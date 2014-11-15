@@ -4,6 +4,12 @@
 [![](http://img.shields.io/travis/netguru-training/give_me_something.svg?style=flat-square)](https://travis-ci.org/netguru-training/give_me_something/)
 
 ## General info
+### Authors
+-Krzysztof
+-Piotr
+-Rafał
+### About project
+The purpose of our application is creating a place where all young engineers and their mentors can meet and share their ideas for theses.
 
 ### Heroku
 
@@ -14,6 +20,8 @@ App is available on heroku: https://floating-ridge-4935.herokuapp.com/
 * Ruby on Rails 4.1
 * Ruby 2.1
 * Postgres
+* Devise
+* Bootstrap
 
 ## Setup
 
