@@ -2,7 +2,7 @@ class ThesesController < ApplicationController
   expose :theses
   expose(:thesis, attributes: :thesis_params)
   expose :user
-  expose :category
+  expose :categories
 
   def index
   end
@@ -16,6 +16,7 @@ class ThesesController < ApplicationController
 
   def create
     thesis = Thesis.new(thesis_params)
+    # thesis.category_id = thesis_params[:category]
     thesis.user_id = current_user.id
     thesis.save
     redirect_to root_path
@@ -30,21 +31,20 @@ class ThesesController < ApplicationController
   end
 
   def join
-    if thesis.participants.count >= thesis.limit
-      redirect_to categories_path, notice: 'No free spaces available for this thesis'
-    else
+    if thesis.available?
       current_user.chosen_thesis_id = thesis.id
       if current_user.save
         redirect_to thesis_path(thesis),  notice: 'You have been added to the thesis'
       else
-        render thesis_path(thesis), notice: 'You have not been'
+        render thesis_path(thesis), error: 'You have not been added'
       end
+    end
   end
 
 
   private
 
   def thesis_params
-    params.require(:thesis).permit(:title, :description, :university, :user_id)
+    params.require(:thesis).permit(:title, :description, :university, :user_id, :category_id)
   end
 end

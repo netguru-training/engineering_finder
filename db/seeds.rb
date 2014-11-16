@@ -11,11 +11,13 @@ user = CreateAdminService.new.call
 puts 'CREATED ADMIN USER: ' << user.email
 
 5.times do
-  User.create firstname: Faker::Name.first_name, lastname: Faker::Name.last_name, email: Faker::Internet.email, admin: false
+  User.create firstname: Faker::Name.first_name, lastname: Faker::Name.last_name,
+  email: Faker::Internet.email, admin: false, chosen_thesis_id: 1
 end
 
 5.times do
-Thesis.create user_id: 1 , category_id: 1, title: Faker::Lorem.sentence
+Thesis.create user_id: 1 , category_id: 1, title: Faker::Lorem.sentence,
+participants_limit: rand(6)
 end
 
 5.times do

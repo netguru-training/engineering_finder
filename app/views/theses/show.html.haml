@@ -7,4 +7,15 @@
     Author:
     = thesis.user.firstname
     = thesis.user.lastname
-    .
+%br
+%br
+
+%article
+  -if thesis.description == nil
+    %i
+      %p There is no description for this thesis
+  -else
+    = thesis.description
+-if current_user
+  .pull-right
+    = link_to 'Join', theses_join_path, class: 'btn btn-primary'

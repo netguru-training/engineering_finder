@@ -1,3 +1,28 @@
 // Place all the styles related to the Thesis controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.btn-bottom {
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 310px;
+}
+
+.new-thesis-partial {
+  width: 60%;
+  margin: auto;
+}
+
+.content {
+  width: 80%;
+  margin: auto;
+}
+
+select#thesis_category_id {
+    width: 310px;
+}
+
+input {
+  width: 310px;
+}
