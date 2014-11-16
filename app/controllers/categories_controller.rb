@@ -2,8 +2,7 @@ class CategoriesController < ApplicationController
 
   expose(:categories)
   expose(:category)
-  expose_decorated(:theses,decorator: ThesisDecorator, ancestor: :category)#{category.thesis}
-
+  expose_decorated(:theses, decorator: ThesisDecorator, ancestor: :category)
 
   def index
   end
