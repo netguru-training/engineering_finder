@@ -9,11 +9,11 @@
       %th Owner
       %th Action
       - theses.each do |t|
-        %tr
-        = t.available
-        %td= t.participants.count
-        %td= t.user.email
-        %td= link_to "Show", thesis_path(t), class: "btn btn-info btn-bottom"
+        %tr{ class: t.css_available_class }
+          %td= t.title
+          %td= t.participants.count
+          %td= t.user.email
+          %td= link_to "Show", thesis_path(t), class: "btn btn-standard btn-bottom"
   - if user_signed_in?
     %center
       = link_to "Add new thesis", new_thesis_path, class: "btn btn-info btn-bottom"

@@ -9,15 +9,12 @@ class ThesisDecorator < Draper::Decorator
   #       object.created_at.strftime("%a %m/%d/%y")
   #     end
   #   end
-  def available
-    if object.participants_limit != nil
-      if object.participants.size < object.participants_limit
-        h.content_tag(:td, object.title, class: 'success')
-      else
-        h.content_tag(:td, object.title, class: 'danger')
-      end
+  def css_available_class
+   #if object.participants_limit.to_i < object.participants.count
+    if object.participants.count < object.participants_limit.to_i
+      'success'
     else
-      h.content_tag(:td, object.title)
+      'danger'
     end
   end
 end
