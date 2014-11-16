@@ -1,9 +1,4 @@
-.jumbotron
-  %center
-    %h1 Welcome to EngineeringFinder!
-    %h4 View, share, comment and find team for thesis realization!
-    - if user_signed_in?
-      = link_to "Join us!", new_user_registration_path, class: "btn btn-primary"
+%h1 Categories view
 
 
 - unless categories.present?
