@@ -3,9 +3,11 @@
     %th Title
     %th University
     %th Owner
+    %th
     - theses.each do |thesis|
       %tr
       %td=thesis.title
       %td=thesis.university
       %td=thesis.user.email
+      %td= link_to("Show", category_thesis_path(category,thesis), class: "btn btn-info" )
 
