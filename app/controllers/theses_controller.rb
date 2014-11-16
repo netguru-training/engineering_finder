@@ -2,7 +2,7 @@ class ThesesController < ApplicationController
   expose :theses
   expose(:thesis, attributes: :thesis_params)
   expose :user
-  expose :category
+  expose :categories
 
   def index
   end
@@ -16,6 +16,7 @@ class ThesesController < ApplicationController
 
   def create
     thesis = Thesis.new(thesis_params)
+    # thesis.category_id = thesis_params[:category]
     thesis.user_id = current_user.id
     thesis.save
     redirect_to root_path
@@ -45,6 +46,6 @@ class ThesesController < ApplicationController
   private
 
   def thesis_params
-    params.require(:thesis).permit(:title, :description, :university, :user_id)
+    params.require(:thesis).permit(:title, :description, :university, :user_id, :category_id)
   end
 end

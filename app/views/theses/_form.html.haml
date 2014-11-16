@@ -1,5 +1,5 @@
 .thesis-form
-  = form_for thesis, html: {class: "form-horizontal"} do |f|
+  = form_for thesis, html: {class: "form"} do |f|
     .form-group
       = f.label :title
       = f.text_field :title
@@ -11,5 +11,10 @@
     .form-group
       = f.label :university
       = f.text_field :university
+
+    .form-group
+      = f.label :category
+      = f.collection_select :category_id, Category.all, :id, :name
+
     %center
       = f.submit "Save thesis!", class: "btn btn-success"
