@@ -1,4 +1,6 @@
-%h1 Categories view
+.jumbotron
+  %center
+    %h1 Categories
 
 
 - if categories.empty?
@@ -9,9 +11,10 @@
   - categories.each do |category|
     .row
       .col-md-8
-        = category.name
+        %b
+          = category.name
       .col-md-2
-        Theses in this category:
+        Items:
         = category.theses.count
       .col-md-2
         = link_to "Show", category_path(category), class: "btn btn-info"
