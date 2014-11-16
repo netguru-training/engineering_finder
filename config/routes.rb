@@ -12,6 +12,6 @@ Rails.application.routes.draw do
     end
   end
 
-  get 'category_theses/:id', to: 'categories#category_theses', as: 'category_theses'
+  get 'category_theses/:id', to: 'categories#category_theses', as: 'category_theses_filtr'
 
 end

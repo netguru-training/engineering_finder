@@ -11,6 +11,6 @@ class CategoriesController < ApplicationController
 
   end
 
-  def custom_categories
+  def category_theses_filtr
   end
 end
