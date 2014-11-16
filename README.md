@@ -1,7 +1,7 @@
-# Give Me Something!
-[![](http://img.shields.io/codeclimate/github/netguru-training/give_me_something.svg?style=flat-square)](https://codeclimate.com/github/netguru-training/give_me_something)
-[![](http://img.shields.io/codeclimate/coverage/github/netguru-training/give_me_something.svg?style=flat-square)](https://codeclimate.com/github/netguru-training/give_me_something)
-[![](http://img.shields.io/travis/netguru-training/give_me_something.svg?style=flat-square)](https://travis-ci.org/netguru-training/give_me_something/)
+# Engineering Finder
+[![](http://img.shields.io/codeclimate/github/netguru-training/engineering_finder.svg?style=flat-square)](https://codeclimate.com/github/netguru-training/engineering_finder)
+[![](http://img.shields.io/codeclimate/coverage/github/netguru-training/engineering_finder.svg?style=flat-square)](https://codeclimate.com/github/netguru-training/engineering_finder)
+[![](http://img.shields.io/travis/netguru-training/engineering_finder.svg?style=flat-square)](https://travis-ci.org/netguru-training/engineering_finder/)
 
 ## General info
 ### Authors
