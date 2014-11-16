@@ -1,4 +1,11 @@
-%h3 Category theses
+.jumbotron
+  %center
+    %h2
+      Theses in
+      = category.name
+= render 'theses/theses_table'
 
-=render 'categories_list'
-=render 'theses/theses_table'
+%center
+  %h2
+    Check out additional categories:
+= render 'categories_list'

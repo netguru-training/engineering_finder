@@ -1,12 +1,15 @@
 .thesis-form
-  = form_for thesis do |f|
-    = f.label :title
-    = f.text_field :title
+  = form_for thesis, html: {class: "form-horizontal"} do |f|
+    .form-group
+      = f.label :title
+      = f.text_field :title
 
-    = f.label :description
-    = f.text_area :description
+    .form-group
+      = f.label :description
+      = f.text_area :description
 
-    = f.label :university
-    = f.text_field :university
-
-    = f.submit
+    .form-group
+      = f.label :university
+      = f.text_field :university
+    %center
+      = f.submit "Save thesis!", class: "btn btn-success"

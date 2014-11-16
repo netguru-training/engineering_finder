@@ -4,7 +4,6 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-    add_breadcrumb "Users", users_path
   end
 
   def show
@@ -14,7 +13,6 @@ class UsersController < ApplicationController
         redirect_to :back, :alert => "Access denied."
       end
     end
-    add_breadcrumb "User profile", user_path(user)
   end
 
   def update

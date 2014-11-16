@@ -4,10 +4,9 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users
 
-  resources :categories do
-    resources :theses do
-      resources :reviews
-    end
+  resources :categories
+  resources :theses do
+    resources :reviews
   end
 
   get 'category_theses/:id', to: 'categories#category_theses', as: 'category_theses_filtr'

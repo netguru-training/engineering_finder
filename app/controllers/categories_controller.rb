@@ -4,14 +4,13 @@ class CategoriesController < ApplicationController
   expose(:category)
   expose(:theses, ancestor: :category)#{category.thesis}
 
+
   def index
   end
 
   def show
-    add_breadcrumb category.name, category_path(category)
   end
 
   def category_theses_filtr
-    add_breadcrumb "Category filter", category_theses_filtr_path(category)
   end
 end
