@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'students/index'
-
   mount Upmin::Engine => '/admin'
   root to: 'categories#index'
   devise_for :users
@@ -12,6 +10,6 @@ Rails.application.routes.draw do
     end
   end
 
-  get 'category_theses/:id', to: 'categories#category_theses', as: 'category_theses'
+  get 'category_theses/:id', to: 'categories#category_theses', as: 'category_theses_filtr'
 
 end

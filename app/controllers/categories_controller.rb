@@ -11,6 +11,6 @@ class CategoriesController < ApplicationController
     add_breadcrumb category.name, category_path(category)
   end
 
-  def custom_categories
+  def category_theses_filtr
   end
 end
