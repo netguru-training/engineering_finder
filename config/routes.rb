@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   end
 
   get 'category_theses/:id', to: 'categories#category_theses', as: 'category_theses_filtr'
+  get 'theses/:id', to: "theses#join", as: 'theses_join'
 
 end

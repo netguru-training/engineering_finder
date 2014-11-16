@@ -38,6 +38,7 @@ class ThesesController < ApplicationController
       else
         render thesis_path(thesis), error: 'You have not been added'
       end
+    end
   end
 
 
