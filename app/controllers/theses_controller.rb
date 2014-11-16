@@ -13,7 +13,7 @@ class ThesesController < ApplicationController
 
   def new
     thesis = Thesis.new()
-    add_breadcrumb "Add thesis", new_category_thesis_path(category, thesis)
+    add_breadcrumb "Add thesis", new_category_thesis_path(category)
   end
 
   def create

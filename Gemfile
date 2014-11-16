@@ -18,7 +18,6 @@ gem 'simple_form'
 gem 'upmin-admin'
 gem 'draper'
 gem 'decent_exposure'
-gem "breadcrumbs_on_rails"
 
 
 group :development do
