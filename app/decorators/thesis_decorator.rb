@@ -10,6 +10,10 @@ class ThesisDecorator < Draper::Decorator
   #     end
   #   end
   def available
-
+    if object.participants.size < object.participants.limit
+      h.content_tag(:stong, object.title)
+    else
+      h.content_tag(:warning, object.title)
+    end
   end
 end
