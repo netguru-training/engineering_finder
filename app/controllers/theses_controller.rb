@@ -31,15 +31,17 @@ class ThesesController < ApplicationController
   end
 
   def join
-    if thesis.available? && current_user.joined?(thesis.id)
+    if thesis.available? && current_user.joined?(thesis.id) == false
       current_user.chosen_thesis_id = thesis.id
       if current_user.save
         redirect_to thesis_path(thesis),  notice: 'You have been added to the thesis'
       else
-        render thesis_path(thesis), error: 'You have not been added'
+        flash[:error] = 'You have not been added'
+        redirect_to thesis_path(thesis)
       end
     else
-      render thesis_path(thesis), error: 'You cannot be added'
+      flash[:error] = 'Thesis full or you already are added to another one'
+      redirect_to thesis_path(thesis)
     end
   end
 

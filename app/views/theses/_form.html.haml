@@ -16,5 +16,9 @@
       = f.label :category
       = f.collection_select :category_id, Category.all, :id, :name
 
+    .form-group
+      = f.label :participans_limit
+      = f.number_field :participants_limit
+
     %center
       = f.submit "Save thesis!", class: "btn btn-success"
