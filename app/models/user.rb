@@ -13,8 +13,10 @@ class User < ActiveRecord::Base
 
   has_many :theses
 
+  validates :firstname, :lastname, presence: true
 
-validates :firstname, :lastname, presence: true
-
+  def admin?
+    admin
+  end
 
 end

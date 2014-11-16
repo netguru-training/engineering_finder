@@ -1,7 +1,5 @@
-%h1 Categories view
-
 %h2="There's #{categories.size}"
 
 %ul
   - categories.each do |category|
-    %li= category.name
+    %li= link_to category.name, custom_categories_path(category)

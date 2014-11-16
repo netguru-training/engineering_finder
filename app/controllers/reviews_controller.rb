@@ -1,4 +1,6 @@
 class ReviewsController < ApplicationController
+  require 'application_helper'
+
   expose :reviews
   expose(:review, attributes: :review_params)
   expose :user
@@ -22,7 +24,7 @@ class ReviewsController < ApplicationController
   end
 
   def delete
-
+    redirect_to product_path(review_params[:product]) unless current_user.is_admin?
   end
 
   private
