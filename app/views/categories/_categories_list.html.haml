@@ -1,7 +1,7 @@
 %center
   %h3
-    ="(There're #{categories.size} other categories)"
+    ="(There're #{categories.size - 1} other categories)"
 
 %ul
-  - categories.each do |category|
-    %li= link_to category.name, category_theses_filtr_path(category)
+  - categories.each_with_index do |category, i|
+    %li{class: "#{highlight?(i)}"}= link_to category.name, category_theses_filtr_path(category)
