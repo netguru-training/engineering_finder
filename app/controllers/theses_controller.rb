@@ -31,7 +31,7 @@ class ThesesController < ApplicationController
   end
 
   def join
-    if thesis.available? && current_user.joined?(thesis.id)
+    if thesis.available? && current_user.joined?(thesis.id) == false
       current_user.chosen_thesis_id = thesis.id
       if current_user.save
         redirect_to thesis_path(thesis),  notice: 'You have been added to the thesis'
