@@ -10,6 +10,6 @@ class CategoriesController < ApplicationController
   end
   
   def custom_categories
-
+    self.theses = category.thesis
   end
 end

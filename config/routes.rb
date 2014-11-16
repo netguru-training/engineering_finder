@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   resources :theses
   resources :categories
 
-  get 'custom_categories', to: 'categories#custom_categories', as: 'custom_categories'
+  get 'custom_categories/:id', to: 'categories#custom_categories', as: 'custom_categories'
 
 end
