@@ -9,7 +9,7 @@
       %th Owner
       - theses.each do |thesis|
         %tr
-        %td= thesis.title
+        =thesis.available
         %td= thesis.university
         %td= thesis.user.email
 %center
