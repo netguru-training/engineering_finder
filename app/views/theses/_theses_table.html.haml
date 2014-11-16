@@ -5,13 +5,18 @@
   -else
     %tr
       %th Title
-      %th University
+      %th Participants
       %th Owner
+      %th Action
       - theses.each do |thesis|
         %tr
         %td= thesis.title
-        %td= thesis.university
+        %td= thesis.participants.count
         %td= thesis.user.email
+        %td= link_to "Show", thesis_path, class: "btn btn-standard btn-bottom"
   - if user_signed_in?
     %center
       = link_to "Add new thesis", new_thesis_path, class: "btn btn-success btn-bottom"
+%center
+  = link_to "Add new thesis", new_thesis_path, class: "btn btn-success btn-bottom"
+

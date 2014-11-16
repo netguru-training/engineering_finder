@@ -31,14 +31,12 @@ class ThesesController < ApplicationController
   end
 
   def join
-    if thesis.participants.count >= thesis.limit
-      redirect_to categories_path, notice: 'No free spaces available for this thesis'
-    else
+    if thesis.available?
       current_user.chosen_thesis_id = thesis.id
       if current_user.save
         redirect_to thesis_path(thesis),  notice: 'You have been added to the thesis'
       else
-        render thesis_path(thesis), notice: 'You have not been'
+        render thesis_path(thesis), error: 'You have not been added'
       end
   end
 
