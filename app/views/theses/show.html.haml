@@ -3,12 +3,12 @@
     = thesis.title
 .thesis-description
   = thesis.description
-  .thesis-author
-    Author:
-    = thesis.user.firstname
-    = thesis.user.lastname
-%br
-%br
+  .pull-right
+    %p
+      = thesis.participants.count
+      participants
+      = thesis.participants_limit
+      limit
 
 %article
   -if thesis.description == nil
@@ -18,4 +18,9 @@
     = thesis.description
 -if current_user
   .pull-right
-    = link_to 'Join', theses_join_path, class: 'btn btn-primary'
+    = link_to 'Join', theses_join_path(thesis), class: 'btn btn-primary'
+
+.thesis-author
+  Author:
+  = thesis.user.firstname
+  = thesis.user.lastname

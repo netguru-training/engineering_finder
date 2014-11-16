@@ -17,7 +17,7 @@ end
 
 5.times do
 Thesis.create user_id: 1 , category_id: 1, title: Faker::Lorem.sentence,
-participants_limit: rand(6)
+participants_limit: 5
 end
 
 5.times do

@@ -20,4 +20,7 @@ class User < ActiveRecord::Base
     admin
   end
 
+  def joined? thesis_id
+    chosen_thesis_id == thesis_id
+  end
 end
