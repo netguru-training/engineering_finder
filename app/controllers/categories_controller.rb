@@ -2,8 +2,7 @@ class CategoriesController < ApplicationController
 
   expose(:categories)
   expose(:category)
-  expose(:theses)
-
+  expose(:theses, ancestor: :category)#{category.thesis}
   def index
 
   end
@@ -13,6 +12,5 @@ class CategoriesController < ApplicationController
   end
 
   def custom_categories
-    self.theses = category.thesis
   end
 end

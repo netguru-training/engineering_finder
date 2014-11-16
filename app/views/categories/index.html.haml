@@ -1,7 +1,17 @@
 %h1 Categories view
 
-%h2="There's #{categories.size}"
-
-%ul
-  - categories.each do |category|
-    %li= category.name
+%h2
+  - unless categories.present?
+    %center
+      We're sorry, there are no categories added (yet)!!!
+  - else
+    - categories.each do |category|
+      .row
+        .col-md-8
+          = category.name
+        .col-md-2
+          Theses in this category:
+          = category.thesis.count
+        .col-md-2
+          = link_to "Show", category_path(category), class: "btn btn-info"
+>>>>>>> 2f702cb9dca2e54f0179273910aef0be63d3aabc
