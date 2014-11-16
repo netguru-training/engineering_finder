@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'students/index'
+
   mount Upmin::Engine => '/admin'
   root to: 'categories#index'
   devise_for :users
@@ -9,5 +11,7 @@ Rails.application.routes.draw do
       resources :reviews
     end
   end
+
+  get 'custom_categories/:id', to: 'categories#custom_categories', as: 'custom_categories'
 
 end
