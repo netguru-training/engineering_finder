@@ -10,7 +10,8 @@ class ThesisDecorator < Draper::Decorator
   #     end
   #   end
   def css_available_class
-    if object.participants_limit.to_i < object.participants.count
+   #if object.participants_limit.to_i < object.participants.count
+    if object.participants.count < object.participants_limit.to_i
       'success'
     else
       'danger'
