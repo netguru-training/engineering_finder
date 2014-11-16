@@ -1,7 +1,7 @@
 %table.table.table-bordered.table-striped.table-hover
   - if theses.empty?
     %h2
-      Tehere are no theses matching this category (yet)!
+      There are no theses matching this category (yet)!
   -else
     %tr
       %th Title
@@ -9,6 +9,8 @@
       %th Owner
       - theses.each do |thesis|
         %tr
-        %td=thesis.title
-        %td=thesis.university
-        %td=thesis.user.email
+        %td= thesis.title
+        %td= thesis.university
+        %td= thesis.user.email
+%center
+  = link_to "Add new thesis", new_thesis_path, class: "btn btn-success btn-bottom"
