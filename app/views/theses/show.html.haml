@@ -24,3 +24,9 @@
   Author:
   = thesis.user.firstname
   = thesis.user.lastname
+
+.container
+  %h3 Thesis participants
+  %ul
+    - thesis.participants.each do |participant|
+      %li="#{participant.firstname} #{participant.lastname}"
