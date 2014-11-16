@@ -7,6 +7,7 @@ class ReviewsController < ApplicationController
 
   def new
     review = Review.new()
+    add_breadcrumb new_category_thesis_review_path(category, thesis)
   end
 
   def create

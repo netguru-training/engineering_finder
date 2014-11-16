@@ -11,7 +11,8 @@
     %header
       = render 'layouts/navigation'
     %main{:role => "main"}
-      = render 'layouts/messages'
-      = yield
+      .container
+        = render 'layouts/messages'
+        = yield
     %footer
-      = render 'layouts/footer' 
+      = render 'layouts/footer'

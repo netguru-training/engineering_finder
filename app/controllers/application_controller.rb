@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  add_breadcrumb "Home", :root_path, options: { title: "Home" }
+
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   include ActiveModel::ForbiddenAttributesProtection
