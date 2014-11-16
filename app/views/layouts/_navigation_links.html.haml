@@ -2,5 +2,5 @@
   %li= link_to 'Edit account', edit_user_registration_path, class: "btn btn-warning"
   %li= link_to 'Sign out', destroy_user_session_path, :method=>'delete', class: "btn btn-danger"
 - else
-  %li= link_to 'Sign in', new_user_session_path, class: "btn btn-primary"
-  %li= link_to 'Sign up', new_user_registration_path, class: "btn btn-success"
+  %li= link_to 'Sign in', new_user_session_path, class: "btn btn-primary", class: "btn btn-primary"
+  %li= link_to 'Sign up', new_user_registration_path, class: "btn btn-success", class: "btn btn-success"

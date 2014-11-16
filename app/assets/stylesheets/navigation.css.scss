@@ -1,0 +1,49 @@
+.footer {
+  color: #FFF;
+}
+
+.navbar {
+  .btn {
+    margin-bottom: auto;
+    margin-top: auto;
+    margin-left: 1px;
+    margin-right: 1px;
+    padding: 5px;
+    &.btn-success {
+      background-color: #5cb85c;
+      color: #000;
+      &:hover {
+        background-color: #449d44;
+        color: #fff;
+      }
+      padding: 5px;
+    }
+    &.btn-warning {
+      background-color: #f0ad4c;
+      color: #000;
+      &:hover {
+        color: #FFF;
+        background-color: #ec971f;
+      }
+      padding: 5px;
+    }
+    &.btn-danger {
+      color: #000;
+      background-color: #d9534f;
+      &:hover {
+        color: #FFF;
+        background-color: #c9302c;
+      }
+      padding: 5px;
+    }
+    &.btn-primary {
+      color: #000;
+      background-color: #337ab7;
+      &:hover {
+        color: #FFF;
+        background-color: #286090;
+      }
+      padding: 5px;
+    }
+  }
+}
