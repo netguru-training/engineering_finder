@@ -5,17 +5,18 @@
     - if user_signed_in?
       = link_to "Join us!", new_user_registration_path, class: "btn btn-primary"
 
-%h2
-  - unless categories.present?
+
+- unless categories.present?
+  %h2
     %center
       We're sorry, there are no categories added (yet)!!!
-  - else
-    - categories.each do |category|
-      .row
-        .col-md-8
-          = category.name
-        .col-md-2
-          Theses in this category:
-          = category.theses.count
-        .col-md-2
-          = link_to "Show", category_path(category), class: "btn btn-info"
+- else
+  - categories.each do |category|
+    .row
+      .col-md-8
+        = category.name
+      .col-md-2
+        Theses in this category:
+        = category.thesis.count
+      .col-md-2
+        = link_to "Show", category_path(category), class: "btn btn-info"
