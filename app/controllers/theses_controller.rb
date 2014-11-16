@@ -4,15 +4,16 @@ class ThesesController < ApplicationController
   expose :user
 
   def index
-
+    add_breadcrumb "Theses", category_theses_path(category)
   end
 
   def show
-
+    add_breadcrumb "Thesis", category_thesis_path(category, thesis)
   end
 
   def new
     thesis = Thesis.new()
+    add_breadcrumb "Add thesis", new_category_thesis_path(category, thesis)
   end
 
   def create
@@ -23,14 +24,13 @@ class ThesesController < ApplicationController
   end
 
   def edit
-
+    add_breadcrumb "Edit thesis", edit_category_thesis_review_path(category, thesis)
   end
 
   def update
     thesis.update(thesis_params)
     redirect_to thesis_path(thesis.id)
   end
-
 
 
   private

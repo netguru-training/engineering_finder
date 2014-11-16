@@ -7,7 +7,7 @@ class ReviewsController < ApplicationController
 
   def new
     review = Review.new()
-    add_breadcrumb new_category_thesis_review_path(category, thesis)
+    add_breadcrumb "Add review", new_category_thesis_review_path(category, thesis)
   end
 
   def create
@@ -18,6 +18,7 @@ class ReviewsController < ApplicationController
 
   def edit
     redirect to product_path(review_params[:product])
+    add_breadcrumb "Edit review", edit_category_thesis_review_path(category, thesis)
   end
 
   def update

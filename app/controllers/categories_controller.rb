@@ -12,5 +12,6 @@ class CategoriesController < ApplicationController
   end
 
   def category_theses_filtr
+    add_breadcrumb "Category filter", category_theses_filtr_path(category)
   end
 end
