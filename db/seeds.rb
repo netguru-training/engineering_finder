@@ -12,7 +12,8 @@ puts 'CREATED ADMIN USER: ' << user.email
 
 5.times do
   User.create firstname: Faker::Name.first_name, lastname: Faker::Name.last_name,
-  email: Faker::Internet.email, admin: false, chosen_thesis_id: 1
+  email: Faker::Internet.email, password: Faker::Internet.password(8),
+  admin: false, chosen_thesis_id: 1
 end
 
 5.times do
