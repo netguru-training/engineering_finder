@@ -1,5 +1,5 @@
 class ThesesController < ApplicationController
-  expose :theses
+  expose_decorated(:theses, decorator: ThesisDecorator)
   expose(:thesis, attributes: :thesis_params)
   expose :user
   expose :categories
