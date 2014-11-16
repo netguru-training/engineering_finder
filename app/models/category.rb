@@ -1,3 +1,3 @@
 class Category < ActiveRecord::Base
-  has_many :thesis
+  has_many :theses
 end
