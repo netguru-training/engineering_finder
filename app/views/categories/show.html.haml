@@ -1,1 +1,10 @@
-%h3 Category details
+.jumbotron
+  %center
+    %h1
+      = category.name
+- if category.thesis.empty?
+  %center
+    %h2
+      Sorry, there are no theses added (yet)!
+- else
+  
