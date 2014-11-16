@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :theses
+  belongs_to :theses, foreign_key: 'chosen_thesis_id'
 
   validates :firstname, :lastname, presence: true
 
